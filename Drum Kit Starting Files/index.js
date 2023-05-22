@@ -2,12 +2,14 @@ for (let drum of document.querySelectorAll(".drum")) {
     
     drum.addEventListener("click", function() { 
         PlaySound(drum.textContent);
-    });
-
-    drum.addEventListener("keydown", function(event) {
-        PlaySound(event.key);
+        Animate(drum.textContent);
     });
 }
+
+document.addEventListener("keydown", function(event) {
+    Animate(event.key);
+    PlaySound(event.key);
+});
 
 function PlaySound(key) {
     switch (key) {
@@ -35,4 +37,9 @@ function PlaySound(key) {
         default:
             console.log("No matching audio files found.");
     }
+}
+
+function Animate(key) {
+    document.querySelector("." + key).classList.add("pressed");
+    setTimeout(function() { document.querySelector("." + key).classList.remove("pressed") }, 100);
 }
