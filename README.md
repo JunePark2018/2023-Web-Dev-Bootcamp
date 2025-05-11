@@ -1,5 +1,4 @@
 # The Complete 2023 Web Development Bootcamp
-by Angela Yu
 
 <p>Udemy에서 Angela Yu 박사님이 강의하는 웹 개발 부트캠프에서 실습한 예제들을 모아놓았다.</p>
 
